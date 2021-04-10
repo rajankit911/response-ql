@@ -4,16 +4,33 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 
+/**
+ * The StringTokener class provides a method to break a string into tokens
+ * 
+ * @author Ankit Raj
+ * @since 1.0.0
+ */
 public class StringTokener {
 
 	private static final String EXCLUDE = "exclude";
 
 	private Reader reader;
-
+	
+	/**
+	 * Constructs instance that uses RQL String
+	 * 
+	 * @param s RQL String
+	 */
 	public StringTokener(String s) {
 		this.reader = new StringReader(s);
 	}
-
+	
+	/**
+	 * Method to deserialize RQL String
+	 * 
+	 * @return FilterToken object which is a root node of a Tree
+	 * @throws Exception
+	 */
 	public FilterToken deserialize() throws Exception {
 		FilterToken root = new FilterToken("root");
 		nextFilter(root);

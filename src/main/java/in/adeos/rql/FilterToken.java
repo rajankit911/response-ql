@@ -5,6 +5,15 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * FilterToken forms the basis of RQL Tree Model.
+ * <p>
+ * As a general design rule, most accessors ("getters") and mutators ("setters")
+ * are included in this base class.
+ *  
+ * @author Ankit Raj
+ * @since 1.0.0
+ */
 public class FilterToken {
 	private String name;
 	private boolean exclude;
